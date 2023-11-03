@@ -15,7 +15,7 @@ public class NameService {
         this.nameMapper = nameMapper;
     }
 
-    public List<Name> getNames(@RequestParam(required = false) String startsWith) {
+    public List<Name> getNames(String startsWith) {
         if (startsWith == null) {
             return nameMapper.findAll();
 
